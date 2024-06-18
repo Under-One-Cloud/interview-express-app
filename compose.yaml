@@ -1,0 +1,12 @@
+services:
+  server:
+    build:
+      context: .
+    volumes:
+      - ./cache.json:/usr/src/app/cache.json
+      # This mounts the cache.json file on the local file system to the virtual
+      # file system and allows the server to read/write data from it.
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080:8080

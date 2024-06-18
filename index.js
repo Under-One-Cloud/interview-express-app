@@ -47,6 +47,8 @@ router.get("/:num", async (req, res) => {
     await cacheFile.writeFile(JSON.stringify(cacheData));
     await cacheFile.close();
   }
+
+  // Send response
   res.send(`
   <!DOCTYPE html>
   <html>

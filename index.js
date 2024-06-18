@@ -31,7 +31,7 @@ router.get("/:num", async (req, res) => {
     return p.id === id;
   });
   let json;
-  if (pokeCache.length === 1) {
+  if (pokeCache.length >= 1) {
     console.log("CACHE HIT");
     json = pokeCache[0];
   } else {
